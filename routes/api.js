@@ -11,8 +11,6 @@ router.get('/', function(req, res, next) {
       location: '99508'
     },
     headers: {
-      'Postman-Token': 'ca1d9c8e-9775-41d3-9e11-563bb16bfaa7',
-      'Cache-Control': 'no-cache',
       Authorization: 'Bearer ' + process.env.TOKEN
     }
   }

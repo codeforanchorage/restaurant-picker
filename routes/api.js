@@ -7,8 +7,8 @@ router.get('/', function(req, res, next) {
     method: 'GET',
     url: 'https://api.yelp.com/v3/businesses/search',
     qs: {
-      term: 'restaurants',
-      location: '99508'
+      term: req.query.term || 'restaurants',
+      location: req.query.location || '99508',
     },
     headers: {
       Authorization: 'Bearer ' + process.env.TOKEN

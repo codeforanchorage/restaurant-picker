@@ -1,0 +1,50 @@
+<div *ngIf="activeGame">
+  <div *ngIf="currentOption">
+    <h2>{{currentOption.name}}</h2>
+    <ul>
+      <li *ngFor="let cat of currentOption.categories">{{cat.title}}</li>
+    </ul>
+    <img src="{{currentOption.image_url}}" alt="profile picture of {{currentOption.name}}" width="25%" height="25%">
+    <br>
+    <button (click)="onSelect(true)">Yes</button>
+    <button (click)="onSelect(false)">No</button>
+  </div>
+</div>
+
+<!-- <button type="button" data-toggle="modal" data-target=".chosen-modal">Click</button>
+<a data-toggle="modal" data-target=".chosen-modal" 
+onMouseOver="this.style.cursor='pointer'" (click)="chosenOption = currentOption">Try this</a>
+
+<div class="modal fade chosen-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <p>some content</p>
+    </div>
+  </div>
+</div> -->
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade exampleModal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
